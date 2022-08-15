@@ -31,7 +31,7 @@ class _HomeState extends State<Home> {
       appBar: AppBar(
         title: Text('Tic Tac Toe'),
         centerTitle: true,
-        backgroundColor: Color.fromARGB(255, 95, 156, 194),
+        backgroundColor: Color.fromARGB(255, 63, 63, 63),
         elevation: 0.0,
         actions: [
           IconButton(
@@ -42,7 +42,7 @@ class _HomeState extends State<Home> {
           ),
         ],
       ),
-      backgroundColor: Color.fromARGB(255, 139, 218, 231),
+      backgroundColor: Color.fromARGB(255, 63, 63, 63),
       body: Column(
         children: [
           SizedBox(
@@ -80,7 +80,7 @@ class _HomeState extends State<Home> {
         child: Text(
           '$winnerTitle, play again!',
           style: TextStyle(
-            color: Color.fromARGB(255, 228, 99, 94),
+            color: Colors.deepOrange,
             fontSize: 25.0,
           ),
         ),
@@ -119,7 +119,7 @@ class _HomeState extends State<Home> {
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(70),
                 border: Border.all(
-                  color: Color.fromARGB(255, 95, 156, 194),
+                  color: Color.fromARGB(255, 0, 0, 0),
                   width: 7,
                 ),
               ),
@@ -127,12 +127,11 @@ class _HomeState extends State<Home> {
                 child: Text(
                   xOrOList[index],
                   style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 50,
-                    color: xOrOList[index] == 'X'
-                        ? Color.fromARGB(255, 168, 6, 87)
-                        : Color.fromRGBO(1, 80, 250, 1),
-                  ),
+                      fontWeight: FontWeight.bold,
+                      fontSize: 50,
+                      color: xOrOList[index] == 'X'
+                          ? Colors.deepOrange
+                          : Colors.amber),
                 ),
               ),
             ),
@@ -231,10 +230,9 @@ class _HomeState extends State<Home> {
               child: Text(
                 'Player O',
                 style: TextStyle(
-                  fontSize: 32.0,
-                  fontWeight: FontWeight.bold,
-                  color: Color.fromRGBO(1, 80, 250, 1),
-                ),
+                    fontSize: 32.0,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.amber),
               ),
             ),
             Padding(
@@ -255,10 +253,9 @@ class _HomeState extends State<Home> {
               child: Text(
                 'Player X',
                 style: TextStyle(
-                  fontSize: 32.0,
-                  fontWeight: FontWeight.bold,
-                  color: Color.fromARGB(255, 168, 6, 87),
-                ),
+                    fontSize: 32.0,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.deepOrange),
               ),
             ),
             Padding(
